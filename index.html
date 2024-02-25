@@ -11,11 +11,11 @@
 
     <header>
         <div class="profilePix"></div>
-        <input type="search" name="searcher" id="searcher">
+        <input type="text" name="searcher" id="searcher">
         <div class="options">
             <button type="button" id="searchButton"> Search</button>
             <button type="button" id="clearButton">Clear List</button>
-            <button type="button" id="addItem">New Item</button>
+            <button onclick="addit()" type="button" id="addItem" >New Item</button>
         </div>
     </header>
 
@@ -29,8 +29,8 @@
             </div>
 <hr>
             <div class="info">
-                <h3 class="innerInfo">Get the Groceries</h3>
-                <p class="message">two tea and 5 lemons</p>
+                <p class="innerInfo">Get the Groceries</p>
+                <!-- <p class="message">two tea and 5 lemons</p> -->
             </div>
             
         </article>
@@ -41,6 +41,6 @@
 
     </main>
     
-    <script type="module" src="index.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
