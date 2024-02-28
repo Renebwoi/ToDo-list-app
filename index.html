@@ -14,7 +14,7 @@
         <input type="text" name="searcher" id="searcher">
         <div class="options">
             <button type="button" id="searchButton"> Search</button>
-            <button type="button" id="clearButton">Clear List</button>
+            <button type="button" id="clearButton" onclick="clearEverything()">Clear List</button>
             <button onclick="addit()" type="button" id="addItem" >New Item</button>
         </div>
     </header>
@@ -25,7 +25,7 @@
             <div class="timeInfo">
                 <div class="date">12/03/24</div>
                 <div class="time">6:34</div>
-                <div class="cancelButton">X</div>
+                <div class="cancelButton" onclick="this.parentElement.parentNode.remove();">X</div>
             </div>
 <hr>
             <div class="info">
@@ -40,7 +40,7 @@
     </section>
 
     </main>
-    
-    <script src="index.js"></script>
+    <script src="seter.js"></script>
+    <!-- <script src="index.js"></script> -->
 </body>
 </html>
