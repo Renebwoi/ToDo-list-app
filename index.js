@@ -72,3 +72,38 @@ function formatAMPM(date) {
   }
 
   console.log("done")
+
+  function search() {
+    // console.log(textInpt.value)
+
+    let bee = document.querySelectorAll('.innerInfo')
+    let mee = "you"
+    boo = []
+    
+    // console.log(bee)
+    bee.forEach(element => {
+        // console.log(element)
+        console.log(element.textContent,"for the messages")
+        console.log(textInpt.value,"the search term")
+        
+        if (element.textContent.search(textInpt.value) !== -1){
+            element.parentNode.parentNode.style.display = 'block'
+            console.log("found one")
+        } else {
+            element.parentNode.parentNode.style.display = 'none'
+            console.log("doesnt match")}
+    })
+
+  
+    
+    
+    console.log("test done")
+  }
+
+  function showAll() {
+    let hy = document.querySelectorAll('.innerInfo')
+
+    hy.forEach(element => {
+        element.parentNode.parentNode.style.display = 'block'
+    })
+}

@@ -5,31 +5,45 @@
 body{
     display:grid;
     place-items: center;
-    background-color: blueviolet;
+    background-color: rgb(38, 7, 68);
     height: 100svh;
+
+    /* doesnt work, check it later */
+    animation-name: blinker;
+    animation-iteration-count: 3;
 }
 main{
-    background-color: aliceblue;
+    background-image: linear-gradient(to bottom right, pink, gold, turquoise,lawngreen);
     width: 300px;
     height: 500px;
-    border-radius: 30px;
-    box-shadow: 0 0 30px blue;
-    overflow: hidden;
+    border-radius: 0px 30px 30px 30px;
+    box-shadow: 0 0 30px gold;
+    overflow-x: scroll;
 
+    /* animation-name: blinker;
+    animation-iteration-count: 3; */
     /* display:grid;
     justify-content: center; */
 }
 header{
     display: grid;
-    /* justify-content: center; */
+    align-items: center;
+    justify-content: center;
     /* width: 100%; */
     background-color: blue;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 0px 10px 0px 0px;
     grid-template-columns: 50px 150px 100px;
+    padding-left: 5px;
 }
 .profilePix{
     width: 100%;
-    background-color: yellow;
+    min-height: 50px;
+    background-color: transparent;
+    border-radius: 0 20%;
+    background-image: url(R.png);
+    background-position: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 section.itemBox{
@@ -48,7 +62,21 @@ article.item{
     margin-top: 20px;
     border-radius: 10px;
 }
-
+.options{
+    display: grid;
+    justify-content: left;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.options button{
+    border-radius: 30px;
+    height: 25px;
+    margin-bottom: 3px;
+    border-width: 0px;
+    color: rgb(10, 10, 192);
+    font-weight: 700;
+    background-color: yellow;
+}
 .timeInfo{
     display: flex;
     justify-content: space-around;
@@ -58,8 +86,29 @@ article.item{
     background-color: red;
     display: grid;
     justify-content: center;
+    border-radius: 5px;
 }
 .info{
     display: grid;
     justify-content: center;
+}
+#searcher{
+    width: 90%;
+    height: 80%;
+    margin-left: 10%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* has an issue, maybe change to background color */
+@keyframes blinker {
+    0%{ 
+        background-image: linear-gradient(to bottom right, pink, gold, turquoise,lawngreen);
+    }
+    50%{ 
+        background-image: linear-gradient(to bottom left, rgb(255, 0, 43), rgb(255, 229, 84), rgb(0, 221, 199),rgb(181, 255, 106));
+    }
+    100%{ 
+        background-image: linear-gradient(to bottom right, pink, gold, turquoise,lawngreen);
+    }
 }
